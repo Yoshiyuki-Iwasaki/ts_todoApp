@@ -1,0 +1,27 @@
+-
+    const pageName = "top";
+    const relativePath = '.';
+
+doctype html
+html(lang="ja")
+    head
+        include _inc/head.pug
+    body
+        main(role="main")
+
+        section.pageSec
+        .pageSec__inner
+            .pageSec__inner__block
+                .pageSec__inner__block__header
+                    form.pageSec__inner__block__header__search.search
+                        input.pageSec__inner__block__header__search__input.input(type="text" name="search")
+                        span.pageSec__inner__block__header__search__icon
+                            img(src="images/icon.png")
+                    h1.pageSec__inner__block__header__title やりたいことリスト
+                    form.add.pageSec__inner__block__form
+                        input.pageSec__inner__block__form__input(type="text" name="add" placeholder="Add")
+
+                ul.todos.pageSec__inner__block__list
+
+
+            include _inc/footer.pug

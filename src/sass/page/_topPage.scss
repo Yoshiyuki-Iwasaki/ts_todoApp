@@ -1,0 +1,117 @@
+/*====================================================================
+pageSec
+====================================================================*/
+.pageSec {
+  &__inner {
+    @include u-contentCenter;
+  }
+
+  &__inner__block {
+    margin: 0 auto;
+    padding: 80px 100px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 15px #888;
+    border-radius: 20px;
+
+    @include u-mqMax {
+      padding: 80px 50px 50px;
+      width: calc(100% - 30px);
+    }
+  }
+
+  &__inner__block__header__title {
+    @include u-articleTitle($ta: center);
+  }
+
+  &__inner__block__form {
+    margin-top: 50px;
+
+    @include u-mqMax {
+      margin-top: 30px;
+    }
+  }
+
+  &__inner__block__list {
+    max-height: 300px;
+    overflow: scroll;
+  }
+
+  &__inner__block__list__item {
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #333;
+  }
+
+  &__inner__block__list__item__delete {
+    margin-left: 5px;
+    cursor: pointer;
+  }
+
+  &__inner__block__header__search {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    text-align: center;
+  }
+
+  &__inner__block__form__input,
+  &__inner__block__header__search__input {
+    margin: 0 auto;
+    padding: 5px;
+    border: 1px solid #333;
+  }
+
+  &__inner__block__form__label,
+  &__inner__block__form__input,
+  &__inner__block__header__search__input,
+  &__inner__block__list__item__text,
+  &__inner__block__list__item__delete {
+    display: block;
+    @include u-articleText;
+  }
+  &__inner__block__form__input {
+    width: 100%;
+    border-radius: 10px;
+  }
+  &__inner__block__header__search__input {
+    padding-right: 40px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  &__inner__block__header__search__icon {
+    position: absolute;
+    display: block;
+    top: 50%;
+    right: 10px;
+    width: 25px;
+    height: 25px;
+    transform: translate(0, -50%);
+  }
+
+  &__inner__block__form__label {
+    text-align: center;
+  }
+
+  &__inner__block__list {
+    margin-top: 15px;
+    max-height: 300px;
+    max-width: 300px;
+    overflow-y: scroll;
+    overflow-x: auto;
+  }
+
+  &__inner__block__list__item__text {
+    word-break: break-word;
+  }
+}
+
+/* 見かけ上削除。実際には消してない */
+.filtered {
+  display: none !important;
+}

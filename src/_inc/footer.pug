@@ -1,0 +1,34 @@
+-
+  var pages = [
+    {
+      pageName: 'About',
+      pageDir: 'about'
+    },
+    {
+      pageName: 'Product',
+      pageDir: 'product'
+    },
+    {
+      pageName: 'News',
+      pageDir: 'news'
+    },
+    {
+      pageName: 'Blog',
+      pageDir: 'blog'
+    },
+    {
+      pageName: 'Contact',
+      pageDir: 'contact'
+    }
+  ]
+
+//- footer.siteFooter(role="contentinfo")
+//-     .siteFooter__inner
+//-         h1.siteFooter__inner__logo
+//-           a.siteFooter__inner__logo__link ロゴ
+//-         nav.siteFooter__inner__gnav
+//-             ul.siteFooter__inner__gnav__list(role="list")
+//-                 each page in pages
+//-                     li.siteFooter__inner__gnav__list__item(role="listitem"): a.siteFooter__inner__gnav__list__item__link(href='/'+page['pageDir']+'/') #{page['pageName']}
+
+script(src=`${relativePath}/js/index.js`)

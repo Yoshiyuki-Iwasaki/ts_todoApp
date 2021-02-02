@@ -1,0 +1,32 @@
+-
+  var pages = [
+    {
+      pageName: 'About',
+      pageDir: 'about'
+    },
+    {
+      pageName: 'Product',
+      pageDir: 'product'
+    },
+    {
+      pageName: 'News',
+      pageDir: 'news'
+    },
+    {
+      pageName: 'Blog',
+      pageDir: 'blog'
+    },
+    {
+      pageName: 'Contact',
+      pageDir: 'contact'
+    }
+  ]
+
+header.siteHeader(role="banner")
+    .siteHeader__inner
+        h1.siteHeader__inner__logo
+          a.siteHeader__inner__logo__link ロゴ
+        nav.siteHeader__inner__gnav(role="navigation")
+            ul.siteHeader__inner__gnav__list(role="list")
+                each page in pages
+                    li.siteHeader__inner__gnav__list__item(role="listitem"): a.siteHeader__inner__gnav__list__item__link(href='/'+page['pageDir']+'/') #{page['pageName']}

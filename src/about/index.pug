@@ -1,0 +1,28 @@
+-
+    var pageName = "about";
+    const relativePath = '..';
+
+doctype html
+html(lang="ja")
+    head
+        include ../_inc/head.pug
+    body
+        main(role="main")
+            include ../_inc/header.pug
+
+            section.breadcrumbSec
+                nav.breadcrumbSec__navi(aria-label="breadcrumb")
+                    ul.breadcrumbSec__navi__list
+                        li.breadcrumbSec__navi__list__item
+                            a.breadcrumbSec__navi__list__item__link(href="#") Home
+                        li.breadcrumbSec__navi__list__item
+                            a.breadcrumbSec__navi__list__item__link.active(aria-current="page") Library
+
+            section.pageSec
+                div.pageSec__inner
+                    h2.pageSec__inner__title #{pageName}
+                    p.pageSec__inner__text テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+
+            aside(role="complementary")
+
+            include ../_inc/footer.pug
